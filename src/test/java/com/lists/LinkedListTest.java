@@ -1,5 +1,6 @@
 package com.lists;
 
+import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
 import java.util.NoSuchElementException;
@@ -7,7 +8,7 @@ import java.util.NoSuchElementException;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class LinkedListTest {
+class LinkedListTest extends TestCase {
 
     @Test
     public void testListSize() {
@@ -30,7 +31,7 @@ class LinkedListTest {
     }
 
     @Test
-    public void testIeratorThrowsNoSuchElementException() {
+    public void testIteratorThrowsNoSuchElementException() {
         LinkedList<String> list = new LinkedList<String>();
         boolean thrown = false;
         try {
@@ -39,11 +40,11 @@ class LinkedListTest {
             thrown = true;
         }
 
-        assertTrue(thrown);
+        assertEquals(true, thrown);
     }
 
     @Test
-    public void testIeratorUnsupportedOperationException() {
+    public void testIteratorUnsupportedOperationException() {
         LinkedList<String> list1 = new LinkedList<String>();
         boolean thrown = false;
         try {
@@ -52,7 +53,7 @@ class LinkedListTest {
             thrown = true;
         }
 
-        assertTrue(thrown);
+        assertEquals(true, thrown);
     }
 
     @Test
