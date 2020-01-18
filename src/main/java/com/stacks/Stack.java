@@ -6,6 +6,7 @@ import java.util.NoSuchElementException;
 public class Stack<Item> implements Iterable<Item> {
 
     private Node first;
+    private int size=0;
 
     public Stack() {
         first = null;
@@ -16,6 +17,7 @@ public class Stack<Item> implements Iterable<Item> {
         first = new Node();
         first.item = item;
         first.next = temp;
+        size++;
     }
 
     @Override
@@ -24,11 +26,7 @@ public class Stack<Item> implements Iterable<Item> {
     }
 
     public int size() {
-        int count = 0;
-        for (Item item : this){
-            count++;
-        }
-        return count;
+        return size;
     }
 
     public Item peek() {
@@ -43,6 +41,7 @@ public class Stack<Item> implements Iterable<Item> {
             throw new NoSuchElementException("No item present on stack");
         Item item = first.item;
         first = first.next;
+        size--;
         return item;
     }
 
