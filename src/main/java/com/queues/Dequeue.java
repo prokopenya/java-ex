@@ -53,6 +53,7 @@ public class Dequeue<Item> {
             last.next = null;
             last.prev = oldLast;
             oldLast.next = last;
+            size++;
         }
     }
 
@@ -66,6 +67,7 @@ public class Dequeue<Item> {
             last = last.prev;
             last.next = null;
         }
+        size--;
         return item;
     }
 
