@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class StackTest extends TestCase {
 
     @Test
-    public void testStack(){
+    public void should_change_size(){
         Stack<String> stack = new Stack<>();
         stack.push("one");
         stack.push("two");

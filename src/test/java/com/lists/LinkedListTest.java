@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class LinkedListTest extends TestCase {
 
     @Test
-    public void testListSize() {
+    public void should_change_size() {
         LinkedList<String> list = new LinkedList<String>();
         list.add("1");
         list.add("2");
@@ -24,14 +24,14 @@ class LinkedListTest extends TestCase {
     }
 
     @Test
-    public void testIteratorHasNext() {
+    public void should_not_return_has_next() {
         LinkedList<String> list1 = new LinkedList<String>();
 
         assertEquals(false, list1.iterator().hasNext());
     }
 
     @Test
-    public void testIteratorThrowsNoSuchElementException() {
+    public void should_return_no_such_element_exception() {
         LinkedList<String> list = new LinkedList<String>();
         boolean thrown = false;
         try {
@@ -44,7 +44,7 @@ class LinkedListTest extends TestCase {
     }
 
     @Test
-    public void testIteratorUnsupportedOperationException() {
+    public void should_return_unsupported_operator_exception() {
         LinkedList<String> list1 = new LinkedList<String>();
         boolean thrown = false;
         try {
@@ -57,7 +57,7 @@ class LinkedListTest extends TestCase {
     }
 
     @Test
-    public void testListByAddAtIndex() {
+    public void should_return_element_by_index() {
 
         LinkedList<String> list = new LinkedList<String>();
         list.add("1");

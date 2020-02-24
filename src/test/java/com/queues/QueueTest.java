@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 class QueueTest extends TestCase {
     @Test
-    public void testQueue() {
+    public void should_get_first_item() {
         Queue<Integer> queue = new Queue<>();
 
         queue.enqueue(5);
