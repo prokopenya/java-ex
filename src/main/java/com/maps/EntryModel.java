@@ -2,11 +2,11 @@ package com.maps;
 
 import java.util.Map;
 
-class Entry<K, V> implements Map.Entry<K, V> {
+class EntryModel<K, V> implements Map.Entry<K, V> {
     private final K key;
     private V value;
 
-    Entry(K key, V value) {
+    EntryModel(K key, V value) {
         this.key = key;
         this.value = value;
     }
