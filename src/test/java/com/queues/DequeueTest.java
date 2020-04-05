@@ -1,8 +1,6 @@
 package com.queues;
 
 import org.junit.jupiter.api.Test;
-
-import java.util.Deque;
 import java.util.NoSuchElementException;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class DequeueTest {
 
     @Test
-    void should_change_size() {
+    public void should_change_size() {
         Dequeue<String> que = new Dequeue<>();
         que.addFirst("1");
         que.addFirst("2");
@@ -22,7 +20,7 @@ class DequeueTest {
     }
 
     @Test
-    void should_remove_first_element_from_dequeue() {
+    public void should_remove_first_element_from_dequeue() {
         Dequeue<String> que = new Dequeue<>();
         que.addFirst("1");
         que.addFirst("2");
@@ -33,7 +31,7 @@ class DequeueTest {
     }
 
     @Test
-    void should_add_last_element_in_dequeue() {
+    public void should_add_last_element_in_dequeue() {
         Dequeue<String> que = new Dequeue<>();
         que.addLast("1");
         que.addLast("2");
@@ -49,7 +47,7 @@ class DequeueTest {
     }
 
     @Test
-    void should_add_last_element_in_dequeue() {
+    public void should_remove_last_element_in_dequeue() {
         Dequeue<String> que = new Dequeue<>();
         que.addLast("1");
         que.addLast("2");
@@ -60,19 +58,19 @@ class DequeueTest {
     }
 
     @Test
-    void should_be_empty() {
+    public void should_be_empty() {
         Dequeue<String> que = new Dequeue<>();
         assertEquals(true, que.isEmpty());
     }
 
     @Test
-    void should_be_empty_by_size() {
+    public void should_be_empty_by_size() {
         Dequeue<String> que = new Dequeue<>();
         assertEquals(0, que.size());
     }
 
     @Test
-    void should_not_add_null_element() {
+    public void should_not_add_null_element() {
         Dequeue<String> que = new Dequeue<>();
         try {
             que.addFirst(null);
@@ -84,7 +82,7 @@ class DequeueTest {
     }
 
     @Test
-    void should_not_remove_first_element_from_empty_list() {
+    public void should_not_remove_first_element_from_empty_list() {
         Dequeue<String> que = new Dequeue<>();
         try {
             que.removeFirst();
@@ -97,7 +95,7 @@ class DequeueTest {
     }
 
     @Test
-    void should_not_remove_last_element_from_empty_list() {
+    public void should_not_remove_last_element_from_empty_list() {
         Dequeue<String> que = new Dequeue<>();
 
         try {

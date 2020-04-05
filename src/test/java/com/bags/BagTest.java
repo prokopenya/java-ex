@@ -8,7 +8,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 class BagTest {
-
     @Test
     public void should_be_empty_after_init() {
         Bag<Integer> bags = new Bag<Integer>();

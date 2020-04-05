@@ -1,9 +1,10 @@
 package com.queues;
 
-import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
-class QueueTest extends TestCase {
+import static org.junit.Assert.assertEquals;
+
+class QueueTest {
     @Test
     public void should_get_first_item() {
         Queue<Integer> queue = new Queue<>();

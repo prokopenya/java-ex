@@ -1,9 +1,10 @@
 package com.stacks;
 
-import junit.framework.TestCase;
 import org.junit.jupiter.api.Test;
 
-public class StackTest extends TestCase {
+import static org.junit.Assert.assertEquals;
+
+public class StackTest{
 
     @Test
     public void should_change_size(){
