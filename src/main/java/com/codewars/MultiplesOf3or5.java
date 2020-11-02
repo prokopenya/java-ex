@@ -1,7 +1,6 @@
 package com.codewars;
 
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class MultiplesOf3or5 {
 
@@ -17,7 +16,7 @@ public class MultiplesOf3or5 {
 
     public int streamSolution(int number) {
         return IntStream.range(0, number)
-                .filter(n -> (n % 3 == 0 || i % 5 == 0))
+                .filter(n -> (n % 3 == 0 || n % 5 == 0))
                 .sum();
     }
 }
